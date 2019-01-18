@@ -1,10 +1,10 @@
 {% if error %}
-	<h2>error</h2>
+	<h2>{{ error }}</h2>
 {% endif %}
 {% for blog in blogs_list %}
 	<a href={% url 'blogs:blogsdetail' blog.id %}>
     <h2>{{ blog.title }}</h2></a>
     <p>{{ blog.timestamp }}</p>
-    <p>{{ blog.id }}</p>
+    <!-- <p>{{ blog.id }}</p> -->
     <p>{{ blog.body }}</p><br><br>
 {% endfor %}
