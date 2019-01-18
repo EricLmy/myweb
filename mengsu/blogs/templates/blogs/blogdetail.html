@@ -1,0 +1,11 @@
+{% if blog %}
+    <h2>{{ blog.title }}</h2>
+    <p>{{ blog.timestamp }}</p>
+    <p>{{ blog.body }}</p><br><br>
+{% endif %}
+
+{% for comment in comment_list %}
+    <h3>{{ comment.comment_text }}</h3>
+    <p>好评:{{ comment.goods }}</p>
+    <p>差评:{{ comment.poors }}</p><br>
+{% endfor %}
