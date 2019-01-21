@@ -1,0 +1,16 @@
+{% if blog %}
+    <h2>{{ blog.title }}</h2>
+    <p>{{ blog.timestamp }}</p>
+    <p>{{ blog.body }}</p><br><br>
+	<form action="comment/" method="post">
+		{% csrf_token %}
+		<input type="text" name="comment"><br>
+		<input type="date" name="datetime"><br>
+		<input type="submit" name="提交"><br>
+	</form>
+{% endif %}
+{% for comment in comment_list %}
+    <h3>{{ comment.comment_text }}</h3>
+    <p>好评:{{ comment.goods }}</p>
+    <p>差评:{{ comment.poors }}</p><br>
+{% endfor %}

@@ -1,9 +1,7 @@
-{% if user_list %}
+{% if blogs_list %}
 	<ul>	
-		{% for user in user_list %}
-			<li><a href="">{{ user.user_name }}</a></li>
+		{% for blog in blogs_list %}
+			<li><a href="{% url 'myblogs:blogsdetail' blog.id  %}">{{ blog.title }}</a></li><p>{{ blog.user }}</p>
 		{% endfor %}
 	</ul>
-{% else %}
-	<p> No Manager are available.</p>
 {% endif %}
