@@ -1,7 +1,10 @@
 {% if blogs_list %}
 	<ul>	
 		{% for blog in blogs_list %}
-			<li><a href="{% url 'myblogs:blogsdetail' blog.id  %}">{{ blog.title }}</a></li><p>{{ blog.user }}</p>
+			<li><a href="{% url 'myblogs:blogsdetail' blog.id %}">{{ blog.title }}</a></li><p>{{ blog.user }}</p>
 		{% endfor %}
 	</ul>
+{% else %}
+	<p>no blogs {{ user }}</p>
 {% endif %}
+<p><a href="{{ user.id }}/" title="寫博客" target="_blank">寫博客</a></p>
