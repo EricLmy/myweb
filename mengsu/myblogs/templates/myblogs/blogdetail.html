@@ -1,11 +1,18 @@
-{% if userid %}
-    <h2>{{ userid }}</h2>
-	<form action="save/" method="post" id="usrform">
-		{% csrf_token %}
-		<input type="text" name="title"><br>
-		<input type="date" name="datetime"><br>
-		<input type="submit" name="提交"><br>
-	</form>
-	<textarea rows="4" cols="50" name="body" form="usrform">
-	请在此处输入文本1...</textarea>
-{% endif %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>写博客</title>
+</head>
+<body>
+	{% if userid %}
+	    <h2>{{ userid }}</h2>
+		<form action="save/" method="post" id="usform">
+			{% csrf_token %}
+			<input type="text" name="title"><br>
+			<input type="date" name="datetime"><br>
+			<input type="submit" name="提交" value="提交"><br>
+		</form>
+		<textarea rows="4" cols="50" name="body" form="usform"></textarea>
+	{% endif %}
+</body>
+</html>

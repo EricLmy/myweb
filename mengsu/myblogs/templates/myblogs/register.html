@@ -20,12 +20,12 @@
 	<p><strong>{{ register_ok }}</strong></p>
 {% else %}
 	<form action="register_fun/" method="post">
-	{% csrf_token %}
-	User name: <input type="text" name="username"><br>
-	Password: <input type="password" name="pwd"><br>
-	Mail: <input type="mail" name="mail"><br>
-	Date time: <input type="date" name="datetime"><br>
-	<input type="submit" value="提交">
+		{% csrf_token %}
+		User name: <input type="text" name="username"><br>
+		Password: <input type="password" name="pwd"><br>
+		Mail: <input type="email" name="mail"><br>
+		Date time: <input type="date" name="datetime"><br>
+		<input type="submit" value="提交">
 	</form>
 {% endif %}
 </body>
